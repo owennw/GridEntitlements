@@ -5,14 +5,53 @@ namespace ShoppingAppEntitlements.Controllers
 {
     public class EntitlementsController : ApiController
     {
-        public Entitlement GetEntitlement()
+        public IHttpActionResult GetEntitlement(int id)
         {
-            return new Entitlement
+            Entitlement entitlement = null;
+            switch (id)
             {
-                ViewCustomers = true,
-                EditCustomers = true,
-                ViewShopping = true,
-            };
+                case 1:
+                    entitlement = new Entitlement
+                    {
+                        ViewCustomers = true,
+                        EditCustomers = true,
+                        ViewShopping = true,
+                    };
+
+                    break;
+                case 2:
+                    entitlement = new Entitlement
+                    {
+                        ViewCustomers = true,
+                        EditCustomers = true,
+                        ViewShopping = false,
+                    };
+
+                    break;
+                case 3:
+                    entitlement = new Entitlement
+                    {
+                        ViewCustomers = true,
+                        EditCustomers = false,
+                        ViewShopping = true,
+                    };
+
+                    break;
+                case 4:
+                    entitlement = new Entitlement
+                    {
+                        ViewCustomers = false,
+                        EditCustomers = false,
+                        ViewShopping = false,
+                    };
+
+                    break;
+                default:
+                    return NotFound();
+
+            }
+
+            return Ok(entitlement);
         } 
     }
 }

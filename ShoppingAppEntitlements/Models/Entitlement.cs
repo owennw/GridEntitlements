@@ -6,6 +6,8 @@
 
         public bool EditCustomers { get; set; }
 
+        public bool SearchCustomers { get; set; }
+
         public bool ViewShopping { get; set; }
     }
 }

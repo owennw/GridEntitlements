@@ -15,6 +15,7 @@ namespace ShoppingAppEntitlements.Controllers
                     {
                         ViewCustomers = true,
                         EditCustomers = true,
+                        SearchCustomers = false,
                         ViewShopping = true,
                     };
 
@@ -24,6 +25,7 @@ namespace ShoppingAppEntitlements.Controllers
                     {
                         ViewCustomers = true,
                         EditCustomers = true,
+                        SearchCustomers = true,
                         ViewShopping = false,
                     };
 
@@ -33,6 +35,7 @@ namespace ShoppingAppEntitlements.Controllers
                     {
                         ViewCustomers = true,
                         EditCustomers = false,
+                        SearchCustomers = true,
                         ViewShopping = true,
                     };
 
@@ -42,6 +45,7 @@ namespace ShoppingAppEntitlements.Controllers
                     {
                         ViewCustomers = false,
                         EditCustomers = false,
+                        SearchCustomers = false,
                         ViewShopping = false,
                     };
 
